@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="benchmark-page.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </head>
+  <body>
+    <div id="containerBenchmark" class="container-benchmark">
+      <div class="logo-benchmark">
+          <img src="../assets/img/epicode_logo.png">
+      </div>
+
+      <template>
+      <div class="wrap-content">
+        <div class="timer animatable" id="timer-app">
+          <svg>
+            <circle cx="50%" cy="50%" r="90"/>
+            <circle cx="50%" cy="50%" r="90" pathLength="1" />
+            <text x="100" y="70" text-anchor="middle" class="text-timer">Secondi</text>
+            <text x="100" y="125" text-anchor="middle" class="sec-timer"><tspan id="timeLeft"></tspan></text>
+            <text x="100" y="150" text-anchor="middle" class="text-timer">Rimasti</text>
+          </svg>
+        </div>
+        <div class="question">
+          <p></p>
+        </div>
+        <div class="wrap-answers">
+          <!-- <div class="answer">Central Processing Unit</div>
+          <div class="answer">Central Process Unit</div>
+          <div class="answer">Computer Personal Unit</div>
+          <div class="answer">Central Processor Unit</div> -->
+        </div>
+        <div class="status-footer">
+          <div class="number-question">
+           <p id="number-of-question">DOMANDA</p> 
+          </div>
+          <div class="button">
+            <button class="btn-next">PROSSIMA<i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </template>
+    
+    </div>
+    <script type="module" src="benchmark-page.js"></script>
+  </body>
+</html>

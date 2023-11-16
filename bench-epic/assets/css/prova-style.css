@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap");
+
+/* -------------------------------------- GENERAL REUSE --------------------------------- */
+
+html {
+    height: 100%;
+}
+
+.btn-light:hover{
+    cursor: pointer;
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+ul li {
+    list-style: disc;
+    list-style-position: inside;
+    padding: 4px 0;
+}
+
+.container-welcomepage {
+    max-width: 1200px;
+}
+
+#containerBenchmark {
+    background-image: url(../../assets/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.logo-benchmark img {
+    width: 150px;
+}
+
+/* --------------------------------- GENERAL FONT -------------------------------------- */
+
+#text-align-center{
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.p-bigger {
+    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+    margin: 80px 0 40px 0;
+    line-height: 0.7;
+}
+
+.padding-tb {
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.purple {
+    color: #D20094;
+    font-size: 1.5em;
+}
+
+.btn-light {
+    background-color: #00FFFF;
+    box-shadow: 0px 0px 17px 6px rgba(0, 255, 255, 0.46);
+    border: none;
+    padding: 10px 30px;
+    font-weight: bolder;
+}
+
+/* --------------------------------- WELCOME PAGE -------------------------------------- */
+
+.checkbox-bench {
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-between;
+}
+
+.checkbox-flex {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 20px;
+}
+
+.checkbox-flex label {
+    display: block;
+    padding: 2px 0 12px 32px;
+}
+
+.checkbox-flex input {
+    height: 4px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+}
+
+.checkbox-flex input+label::before {
+    border: 2px solid;
+    content: "";
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 15px;
+}
+
+.checkbox-flex input+label::after {
+    content: "";
+    border: 4px solid;
+    border-left: 0;
+    border-top: 0;
+    height: 10px;
+    left: 4px;
+    opacity: 0;
+    position: absolute;
+    top: -1px;
+    transform: rotate(45deg);
+    transition: opacity 0.2s ease-in-out;
+    width: 7px;
+}
+
+.checkbox-flex input:checked+label::after {
+    opacity: 1;
+}
+
+/* ------------------------------------- START BECHMARK --------------------------------- */
+
+
+/* ------------------------------------ COUNT-DOWN ------------------------------------- */
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 50px 0;
+    color: white;
+}
+
+.timer>svg {
+    width: 200px;
+    height: 200px;
+}
+
+.timer>svg>circle {
+    fill: none;
+    stroke-opacity: 0.4;
+    stroke: #900080;
+    stroke-width: 18;
+    transform-origin: center center;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+.timer>svg>circle::after {
+    stroke: white;
+}
+
+
+.timer>svg>circle+circle {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    stroke-linecap: round;
+    stroke-opacity: 1;
+}
+
+.timer.animatable>svg>circle+circle {
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.text-timer {
+    fill: white;
+    font-size: 1.4rem;
+}
+
+.sec-timer {
+    fill: white;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+/* -----------------------------------DINAMICLY QUIZ----------------------------------- */
+
+.question {
+    display: flex;
+    justify-content: center;
+}
+
+.question p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.wrap-answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.answer {
+    padding: 20px 200px;
+    flex: 0 1 calc(100% / 4);
+    text-align: center;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
+    border-style: outset;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.answer:hover, .btn-next:hover {
+    cursor: pointer;
+}
+
+.status-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.number-of-question {
+    text-align: center;
+}
+
+.btn-next {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+/* ------------------------------- START RESULT PAGE ---------------------------------- */
+
+#resultPageBenchmark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    width: 100%;
+}
+
+#titleResultPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+#resultTxt {
+    font-weight: bold;
+}
+
+.sottoTesto {
+    font-size: 1.3em;
+}
+
+#centralBench {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+#containerbuttonRateUs {
+    display: flex;
+    padding-left: 20px;
+    margin: 50px;
+}
+
+#buttonRateUs {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.034);
+    padding: 15px 60px;
+    border: 2px solid white;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0px 0px 12px 1px rgba(0, 255, 255, 0.233);
+    cursor: pointer;
+    margin: 30px;
+}
+
+.correctWrong,
+.percentualiCW,
+#resultTxt {
+    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 0.7;
+    margin: 16px 0;
+}
+
+#wrongQuestions {
+    text-align: right;
+}
+
+.percentualiCW {
+    font-weight: bold;
+}
+
+#myDoughnutChart {
+    height: 350px;
+    width: 350px;
+    margin: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.466);
+}
+
+#internalCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+    height: 210;
+    width: 230;
+}
+
+#blueCircle {
+    position: relative;
+}
+
+.subtitleCircle {
+    color: #00FFFF;
+    margin: 5px 0 15px 0;
+}
+
+#circleTxt {
+    font-size: 0.8em;
+    padding: 25px;
+}
+
+#containerbuttonRateUs a {
+    text-decoration: none;
+}
+
+#buttonRateUs:hover {
+    background-color: #00FFFF;
+    box-shadow: 0px 0px 17px 6px rgba(0, 255, 255, 0.46);
+}
+
+/* --------------------------------------- FEEDBACK PAGE-------------------------------- */
+
+.margin-first-paragraf{
+    margin-top: 20px 0;
+    margin-bottom: 20px;
+}
+
+.margin-second-paragraf{
+    margin-top: 80px;
+}
+
+#stars{
+margin-top: 30px;
+}
+
+svg{
+    margin: 0 5px;
+}
+
+#input-feedback{  
+    background: transparent;
+    margin-top: 30px;
+    margin-bottom: 40px;    
+    padding-left: 20px;
+    border: none;
+    border-bottom:2px solid #D20094;
+    color: white;
+    width: 450px;
+}
+
+#input-feedback:focus{
+    outline: none;
+}
+
+path{
+fill: #0B113B;
+}
+
+.pathAcceso{
+fill: #00FFFF;
+}
+
+.bg {
+    box-shadow: 0px 0px 8px 4px #D20094;
+    background-color: #D20094 ;
+}
+
+.bg1 {
+    box-shadow: 0px 0px 17px 6px rgba(0, 255, 255, 0.46);
+    color: white;
+}

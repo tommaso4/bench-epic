@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap');
+
+#containerBenchmark{
+    background-image: url(../../assets/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+    height: 100vh;
+    width: 100%;
+}
+
+.logoBenchmark img{
+    width: 150px;
+}
+
+#text-align-center{
+    text-align: center;
+}
+
+.pBigger{
+    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+    margin: 80px 0 40px 0;
+    line-height: 0.7;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.margin-first-paragraf{
+    margin-top: 20px 0;
+    margin-bottom: 20px;
+}
+
+.margin-second-paragraf{
+    margin-top: 80px;
+}
+
+.btnLight{
+    background-color: #00FFFF;
+    box-shadow: 0px 0px 17px 6px rgba(0,255,255,0.46);
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+.btnLight:hover{
+    cursor: pointer;
+}
+
+#stars{
+margin-top: 30px;
+}
+
+svg{
+    margin: 0 5px;
+}
+
+#input-feedback{  
+    background: transparent;
+    margin-top: 30px;
+    margin-bottom: 40px;    
+    padding-left: 20px;
+    border: none;
+    border-bottom:2px solid #D20094;
+    color: white;
+    width: 450px;
+}
+#input-feedback:focus{
+    outline: none;
+}
+
+path{
+fill: #0B113B;
+}
+
+.pathAcceso{
+fill: #00FFFF;
+}
+
+
